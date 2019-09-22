@@ -7,7 +7,8 @@ target 'Mobe' do
 
   # Pods for Mobe
 
-pod 'Alamofire'
+  # Networking / RX
+  pod 'RxAlamofire'
 
   target 'MobeTests' do
     inherit! :search_paths
