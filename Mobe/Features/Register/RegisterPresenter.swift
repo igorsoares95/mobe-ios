@@ -25,7 +25,15 @@ class RegisterPresenter: RegisterPresentationLogic
   
   func presentSomething(response: Register.Something.Response)
   {
-    let viewModel = Register.Something.ViewModel()
+    
+    var viewModel = Register.Something.ViewModel(titleMessage: "", message: "")
+
+    if let error = response.error {
+      viewModel = Register.Something.ViewModel(titleMessage: "Que pena!", message: error)
+    } else {
+      viewModel = Register.Something.ViewModel(titleMessage: "Parabéns", message: "Seu cadastro foi concluído com sucesso!")
+    }
+    
     viewController?.displaySomething(viewModel: viewModel)
   }
 }

@@ -14,16 +14,10 @@ struct Environment {
 	}
 	
 	static func getBaseApiUrl() -> String {
-		guard let url = self.getEnvironmentVariables()?["base_url"] as? String else {
-			return ""
-		}
-		return url
+//    guard let url = self.getEnvironmentVariables()?["base_url"] as? String else {
+//      return ""
+//    }
+//    return url
+    return "http://danielfalsetti-001-site7.ftempurl.com:80"
 	}
-  
-  static func getBaseApiUrlImages() -> String {
-    guard let url = self.getEnvironmentVariables()?["image_url"] as? String else {
-      return ""
-    }
-    return url
-  }
 }

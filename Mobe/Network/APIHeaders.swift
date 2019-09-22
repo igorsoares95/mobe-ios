@@ -16,24 +16,10 @@ class APIHeaders {
     headers["Accept"] = "application/json"
     headers["accept-encoding"] = "*"
     
-    let subscriber = Subscriber.loadSubscriber()
-    if let token = subscriber?.token, !token.isEmpty {
-      headers["Authorization"] = "Bearer \(token)"
-    }
-    
-    if let defaultUserAgent = Alamofire.SessionManager.defaultHTTPHeaders["User-Agent"] {
-      headers["User-Agent"] = "\(defaultUserAgent) (\(DeviceType.current))"
-    }
-    
-    return headers
-  }
-
-  class func authorizationHeader() -> [String: String] {
-    var headers = [String: String]()
-    let subscriber = Subscriber.loadSubscriber()
-    if let token = subscriber?.token, !token.isEmpty {
-      headers["Authorization"] = "Bearer \(token)"
-    }
+//    let subscriber = Subscriber.loadSubscriber()
+//    if let token = subscriber?.token, !token.isEmpty {
+//      headers["Authorization"] = "Bearer \(token)"
+//    }
     
     if let defaultUserAgent = Alamofire.SessionManager.defaultHTTPHeaders["User-Agent"] {
       headers["User-Agent"] = "\(defaultUserAgent) (\(DeviceType.current))"

@@ -78,8 +78,8 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic
   
   func doSomething()
   {
-    let request = Register.Something.Request()
-    interactor?.doSomething(request: request)
+    let request = Register.Something.Request(email: "", name: "", telephone: "", password: "")
+    interactor?.registerUser(request: request)
   }
   
   func displaySomething(viewModel: Register.Something.ViewModel)

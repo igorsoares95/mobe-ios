@@ -10,14 +10,14 @@ import Foundation
 
 class Subscriber: NSObject, NSCoding, Codable {
   var id: Int?
-  var token: String?
-  var cpf: String?
-  var msisdn: Int64?
-  var email: String?
   var name: String?
+  var email: String?
+  var telephone: String?
   
   enum CodingKeys: String, CodingKey {
-    case id, token, cpf, msisdn, email, name
+    case name = "nome"
+    case telephone = "telefone"
+    case id, email
   }
   
   override init() {}
@@ -27,18 +27,14 @@ class Subscriber: NSObject, NSCoding, Codable {
     id = aDecoder.decodeObject(forKey: "id") as? Int
     name = aDecoder.decodeObject(forKey: "name") as? String
     email = aDecoder.decodeObject(forKey: "email") as? String
-    cpf = aDecoder.decodeObject(forKey: "cpf") as? String
-    token = aDecoder.decodeObject(forKey: "token") as? String
-    msisdn = aDecoder.decodeObject(forKey: "msisdn") as? Int64
+    telephone = aDecoder.decodeObject(forKey: "telephone") as? String
   }
 
   public func encode(with aCoder: NSCoder) {
     aCoder.encode(id, forKey: "id")
     aCoder.encode(name, forKey: "name")
     aCoder.encode(email, forKey: "email")
-    aCoder.encode(msisdn, forKey: "msisdn")
-    aCoder.encode(cpf, forKey: "cpf")
-    aCoder.encode(token, forKey: "token")
+    aCoder.encode(telephone, forKey: "telephone")
   }
 
   public static func loadSubscriber() -> Subscriber? {
@@ -46,11 +42,6 @@ class Subscriber: NSObject, NSCoding, Codable {
     guard let decoded  = userDefaults.object(forKey: UserDefaults.Keys.subscriber) as? Data else { return nil }
     guard let decodedUser  = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? Subscriber else { return nil }
     return decodedUser
-  }
-  
-  public static func isLogged() -> Bool {
-    guard (loadSubscriber()?.token) != nil else { return false }
-    return true
   }
   
   public static func remove() {

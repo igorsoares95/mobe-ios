@@ -14,7 +14,7 @@ import UIKit
 
 protocol RegisterBusinessLogic
 {
-  func doSomething(request: Register.Something.Request)
+  func registerUser(request: Register.Something.Request)
 }
 
 protocol RegisterDataStore
@@ -25,17 +25,33 @@ protocol RegisterDataStore
 class RegisterInteractor: RegisterBusinessLogic, RegisterDataStore
 {
   var presenter: RegisterPresentationLogic?
-  var worker: RegisterWorker?
+  var worker: SubscriberService?
   //var name: String = ""
   
   // MARK: Do something
   
-  func doSomething(request: Register.Something.Request)
+  func registerUser(request: Register.Something.Request)
   {
-    worker = RegisterWorker()
-    worker?.doSomeWork()
+    worker = SubscriberService()
+
+    let name = request.name
+    let email = request.email
+    let telephone = request.telephone
+    let password = request.password
     
-    let response = Register.Something.Response()
-    presenter?.presentSomething(response: response)
+    worker?.register(name: name, email: email, telephone: telephone, password: password, completionHandler: { response in
+      switch response {
+      case .success(let subscriber):
+        Subscriber.save(subscriber: subscriber)
+        self.presenter?.presentSomething(response: Register.Something.Response(error: nil))
+      case .failure(let error as RegisterError):
+        self.presenter?.presentSomething(response: Register.Something.Response(error: error.localizedDescription))
+      case .failure(let error as APIClientError):
+        self.presenter?.presentSomething(response: Register.Something.Response(error: error.localizedDescription))
+      case .failure(let error):
+        self.presenter?.presentSomething(response: Register.Something.Response(error: error.localizedDescription))
+      }
+    })
+    
   }
 }

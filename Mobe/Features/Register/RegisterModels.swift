@@ -20,12 +20,19 @@ enum Register
   {
     struct Request
     {
+      var email: String
+      var name: String
+      var telephone: String
+      var password: String
     }
     struct Response
     {
+      var error: String?
     }
     struct ViewModel
     {
+      var titleMessage: String
+      var message: String
     }
   }
 }

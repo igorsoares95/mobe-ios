@@ -11,6 +11,9 @@
 		8A00FAC055BE594DA22919DA /* Pods_MobeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2277262F77492680B1ECA1 /* Pods_MobeTests.framework */; };
 		8B0CEFCE22D2775E00911C39 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0CEFCD22D2775E00911C39 /* UITextField.swift */; };
 		8B1BE7F122D266C600DCD16F /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B1BE7F022D266C600DCD16F /* Login.xib */; };
+		8B54CA442337BB6500E6AF4C /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CA432337BB6500E6AF4C /* LoginEndpoint.swift */; };
+		8B54CA462337BB7800E6AF4C /* RegisterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CA452337BB7800E6AF4C /* RegisterEndpoint.swift */; };
+		8B54CA482337CFFE00E6AF4C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CA472337CFFE00E6AF4C /* String.swift */; };
 		8BB8FEA923373504000A0E78 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEA323373504000A0E78 /* RegisterPresenter.swift */; };
 		8BB8FEAA23373504000A0E78 /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEA423373504000A0E78 /* RegisterWorker.swift */; };
 		8BB8FEAB23373504000A0E78 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEA523373504000A0E78 /* RegisterRouter.swift */; };
@@ -62,6 +65,9 @@
 		85D94FBF033047CE7151B052 /* Pods-Mobe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobe.release.xcconfig"; path = "Target Support Files/Pods-Mobe/Pods-Mobe.release.xcconfig"; sourceTree = "<group>"; };
 		8B0CEFCD22D2775E00911C39 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		8B1BE7F022D266C600DCD16F /* Login.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
+		8B54CA432337BB6500E6AF4C /* LoginEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
+		8B54CA452337BB7800E6AF4C /* RegisterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterEndpoint.swift; sourceTree = "<group>"; };
+		8B54CA472337CFFE00E6AF4C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8BB8FEA323373504000A0E78 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		8BB8FEA423373504000A0E78 /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
 		8BB8FEA523373504000A0E78 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
@@ -176,6 +182,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		8B54CA422337B8FA00E6AF4C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B54CA432337BB6500E6AF4C /* LoginEndpoint.swift */,
+				8B54CA452337BB7800E6AF4C /* RegisterEndpoint.swift */,
+				8BB8FEBB233737C9000A0E78 /* SubscriberService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8B8E18D722D2661A00CB06AC /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +217,6 @@
 		8BB8FEB023373770000A0E78 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8BB8FEBB233737C9000A0E78 /* SubscriberService.swift */,
 				8BB8FEB123373770000A0E78 /* APIHeaders.swift */,
 				8BB8FEB223373770000A0E78 /* Environment.swift */,
 				8BB8FEB323373770000A0E78 /* APIClient.swift */,
@@ -252,6 +267,7 @@
 		8BBE1ACC22D242E400FB85B1 /* Mobe */ = {
 			isa = PBXGroup;
 			children = (
+				8B54CA422337B8FA00E6AF4C /* Services */,
 				8BB8FEC2233739BA000A0E78 /* Helpers */,
 				8BB8FEC123373990000A0E78 /* Models */,
 				8BB8FEB023373770000A0E78 /* Network */,
@@ -287,6 +303,7 @@
 		8BE8668F22D276DA0000B12C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8B54CA472337CFFE00E6AF4C /* String.swift */,
 				8BB8FEC523373A8D000A0E78 /* UIDevice.swift */,
 				8B0CEFCD22D2775E00911C39 /* UITextField.swift */,
 				8BB8FEBD23373932000A0E78 /* DateFormatter.swift */,
@@ -518,6 +535,7 @@
 			files = (
 				8BB8FEAD23373504000A0E78 /* RegisterViewController.swift in Sources */,
 				8BB8FEB723373770000A0E78 /* Environment.swift in Sources */,
+				8B54CA482337CFFE00E6AF4C /* String.swift in Sources */,
 				8BB8FEAE23373504000A0E78 /* RegisterInteractor.swift in Sources */,
 				8BB8FEAC23373504000A0E78 /* RegisterModels.swift in Sources */,
 				8BB8FEAA23373504000A0E78 /* RegisterWorker.swift in Sources */,
@@ -527,7 +545,9 @@
 				8BB8FEBC233737C9000A0E78 /* SubscriberService.swift in Sources */,
 				8BB8FEB923373770000A0E78 /* APIEndpoint.swift in Sources */,
 				8BB8FEC4233739D3000A0E78 /* AlamofireHelperArray.swift in Sources */,
+				8B54CA462337BB7800E6AF4C /* RegisterEndpoint.swift in Sources */,
 				8BB8FEB623373770000A0E78 /* APIHeaders.swift in Sources */,
+				8B54CA442337BB6500E6AF4C /* LoginEndpoint.swift in Sources */,
 				8BE8668C22D26CAE0000B12C /* LoginView.swift in Sources */,
 				8BB8FEB823373770000A0E78 /* APIClient.swift in Sources */,
 				8BBE1ACE22D242E400FB85B1 /* AppDelegate.swift in Sources */,
