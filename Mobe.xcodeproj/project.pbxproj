@@ -14,12 +14,6 @@
 		8B54CA442337BB6500E6AF4C /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CA432337BB6500E6AF4C /* LoginEndpoint.swift */; };
 		8B54CA462337BB7800E6AF4C /* RegisterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CA452337BB7800E6AF4C /* RegisterEndpoint.swift */; };
 		8B54CA482337CFFE00E6AF4C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CA472337CFFE00E6AF4C /* String.swift */; };
-		8BB8FEA923373504000A0E78 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEA323373504000A0E78 /* RegisterPresenter.swift */; };
-		8BB8FEAA23373504000A0E78 /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEA423373504000A0E78 /* RegisterWorker.swift */; };
-		8BB8FEAB23373504000A0E78 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEA523373504000A0E78 /* RegisterRouter.swift */; };
-		8BB8FEAC23373504000A0E78 /* RegisterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEA623373504000A0E78 /* RegisterModels.swift */; };
-		8BB8FEAD23373504000A0E78 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEA723373504000A0E78 /* RegisterViewController.swift */; };
-		8BB8FEAE23373504000A0E78 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEA823373504000A0E78 /* RegisterInteractor.swift */; };
 		8BB8FEB623373770000A0E78 /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEB123373770000A0E78 /* APIHeaders.swift */; };
 		8BB8FEB723373770000A0E78 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEB223373770000A0E78 /* Environment.swift */; };
 		8BB8FEB823373770000A0E78 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FEB323373770000A0E78 /* APIClient.swift */; };
@@ -68,12 +62,6 @@
 		8B54CA432337BB6500E6AF4C /* LoginEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
 		8B54CA452337BB7800E6AF4C /* RegisterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterEndpoint.swift; sourceTree = "<group>"; };
 		8B54CA472337CFFE00E6AF4C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		8BB8FEA323373504000A0E78 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
-		8BB8FEA423373504000A0E78 /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
-		8BB8FEA523373504000A0E78 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
-		8BB8FEA623373504000A0E78 /* RegisterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModels.swift; sourceTree = "<group>"; };
-		8BB8FEA723373504000A0E78 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		8BB8FEA823373504000A0E78 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		8BB8FEB123373770000A0E78 /* APIHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
 		8BB8FEB223373770000A0E78 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		8BB8FEB323373770000A0E78 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -195,23 +183,9 @@
 		8B8E18D722D2661A00CB06AC /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8BB8FEAF2337350D000A0E78 /* Register */,
 				8B1BE7ED22D2665100DCD16F /* Login */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		8BB8FEAF2337350D000A0E78 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				8BB8FEA323373504000A0E78 /* RegisterPresenter.swift */,
-				8BB8FEA423373504000A0E78 /* RegisterWorker.swift */,
-				8BB8FEA523373504000A0E78 /* RegisterRouter.swift */,
-				8BB8FEA623373504000A0E78 /* RegisterModels.swift */,
-				8BB8FEA723373504000A0E78 /* RegisterViewController.swift */,
-				8BB8FEA823373504000A0E78 /* RegisterInteractor.swift */,
-			);
-			path = Register;
 			sourceTree = "<group>";
 		};
 		8BB8FEB023373770000A0E78 /* Network */ = {
@@ -533,13 +507,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB8FEAD23373504000A0E78 /* RegisterViewController.swift in Sources */,
 				8BB8FEB723373770000A0E78 /* Environment.swift in Sources */,
 				8B54CA482337CFFE00E6AF4C /* String.swift in Sources */,
-				8BB8FEAE23373504000A0E78 /* RegisterInteractor.swift in Sources */,
-				8BB8FEAC23373504000A0E78 /* RegisterModels.swift in Sources */,
-				8BB8FEAA23373504000A0E78 /* RegisterWorker.swift in Sources */,
-				8BB8FEA923373504000A0E78 /* RegisterPresenter.swift in Sources */,
 				8BE8668E22D26EDE0000B12C /* LoginViewController.swift in Sources */,
 				8BB8FEBE23373932000A0E78 /* DateFormatter.swift in Sources */,
 				8BB8FEBC233737C9000A0E78 /* SubscriberService.swift in Sources */,
@@ -552,7 +521,6 @@
 				8BB8FEB823373770000A0E78 /* APIClient.swift in Sources */,
 				8BBE1ACE22D242E400FB85B1 /* AppDelegate.swift in Sources */,
 				8BB8FEC623373A8D000A0E78 /* UIDevice.swift in Sources */,
-				8BB8FEAB23373504000A0E78 /* RegisterRouter.swift in Sources */,
 				8BB8FEC02337398D000A0E78 /* Subscriber.swift in Sources */,
 				8BB8FEBA23373770000A0E78 /* APIClientError.swift in Sources */,
 				8B0CEFCE22D2775E00911C39 /* UITextField.swift in Sources */,

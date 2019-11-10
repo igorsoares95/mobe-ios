@@ -9,11 +9,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    override func viewDidLoad() {
-      super.viewDidLoad()
-      self.view = LoginView(frame: view.frame)
-      self.navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.view = LoginView(frame: view.frame)
+    self.navigationController?.setNavigationBarHidden(true, animated: true)
+  }
 }

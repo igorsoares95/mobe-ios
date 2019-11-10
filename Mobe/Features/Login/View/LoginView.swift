@@ -9,7 +9,6 @@
 import UIKit
 
 class LoginView: UIView {
-  
   @IBOutlet var contentView: LoginView!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
@@ -53,5 +52,4 @@ class LoginView: UIView {
   @IBAction func clickCreateAccountButton(_ sender: Any) {
   
   }
-  
 }
